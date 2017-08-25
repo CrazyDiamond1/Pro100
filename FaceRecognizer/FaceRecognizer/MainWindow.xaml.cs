@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Drawing;
+using Emgu.CV;
 
 namespace FaceRecognizer
 {
@@ -32,7 +34,9 @@ namespace FaceRecognizer
 
         private void TakePictureButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            //VideoCapture capture = new VideoCapture();
+            Bitmap image = new Bitmap("Icon\\Triangle.png");
+            image.Save("..\\..\\..\\..\\Screenshots\\screen.png", System.Drawing.Imaging.ImageFormat.Png);
         }
 
         private void RetakeButton_Click(object sender, RoutedEventArgs e)
